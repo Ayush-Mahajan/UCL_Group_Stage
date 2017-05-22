@@ -20,6 +20,7 @@ int main()
     
     struct C_team Cteam[8];
     struct Team team[24];
+    char group[32][20];
     strcpy( Cteam[0].title, "Bacelona");
     strcpy( Cteam[1].title, "Bayern");
     strcpy( Cteam[2].title, "Benfica");
