@@ -18,7 +18,7 @@ int main()
 {
     randomize();
     char g='A';
-    int i,j,a, k=0;
+    int i,j,a,b,limit, k=0;
     int grno[3]={0,0,0};
     struct C_team Cteam[8];
     struct Team team[24];
@@ -137,24 +137,32 @@ int main()
     team[23].tn=1;
     team[23].cn=16;
     
+    limit=24;
     for(i=0 ; i<=7 ; i++,g++)
     {
         cout << "Group " << g << endl;
         cout << "------- /n";
         puts(Cteam[i].title);
+        cout << endl;
         for(j=0; j<3; )
         {
-            k=random(24);
+            k=random(limit);
             while(Cteam[i].gn!=team[k],cn)
             {
                 b=1;
                 for(a=0, a<=j, a++)
                 {
-                    if(grno[a]==team[k],cn)
+                    if(grno[a]==team[k].cn)
                     {
                         b=0;
                         continue;
                     }
+                }
+                if(b==1)
+                {
+                    grno[j]=team[k].cn;
+                    puts(team[k].title);
+                    cout << endl;
                 }
                 if(b==0);
                 {
