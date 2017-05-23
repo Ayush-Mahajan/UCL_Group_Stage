@@ -4,12 +4,12 @@
 using namespace std;
 
 struct C_team {
-    char team[20];
+    char title[20];
     int gn;
 }
     
 struct Team {
-    char team[20];
+    char title[20];
     int cn;
     int tn;
 }
@@ -17,10 +17,12 @@ struct Team {
 int main()
 {
     randomize();
-    int i,j, k=0;
+    char g='A';
+    int i,j,a, k=0;
+    int grno[3]={0,0,0};
     struct C_team Cteam[8];
     struct Team team[24];
-    char group[32][20];
+    char group[3][20];
     strcpy( Cteam[0].title, "Bacelona");
     strcpy( Cteam[1].title, "Bayern");
     strcpy( Cteam[2].title, "Benfica");
@@ -53,7 +55,7 @@ int main()
     
     strcpy( team[3].title, "Astana");
     team[3].tn=1;
-    team[3].cn=100;
+    team[3].cn=9;
     
     strcpy( team[4].title, "Leverkusen");
     team[4].tn=1;
@@ -105,45 +107,60 @@ int main()
     
     strcpy( team[16].title, "BATE");
     team[16].tn=1;
-    team[16].cn=101;
+    team[16].cn=10;
     
     strcpy( team[17].title, "Dinamo Zegerb");
     team[17].tn=1;
-    team[17].cn=102;
+    team[17].cn=11;
     
     strcpy( team[18].title, "Dynamo Kyiv");
     team[18].tn=1;
-    team[18].cn=103;
+    team[18].cn=12;
     
     strcpy( team[19].title, "Shakhtar Donetsk");
     team[19].tn=2;
-    team[19].cn=103;
+    team[19].cn=12;
     
     strcpy( team[20].title, "Galatasaray");
     team[20].tn=1;
-    team[20].cn=104;
+    team[20].cn=13;
     
     strcpy( team[21].title, "Gent");
     team[21].tn=1;
-    team[21].cn=105;
+    team[21].cn=14;
     
     strcpy( team[22].title, "M.Tel-Aviv");
     team[22].tn=1;
-    team[22].cn=106;
+    team[22].cn=15;
     
     strcpy( team[23].title, "Malmo");
     team[23].tn=1;
-    team[23].cn=107;
+    team[23].cn=16;
     
-    for(i=0 ; i<=7 ; i++)
+    for(i=0 ; i<=7 ; i++,g++)
     {
-        cout << "Group " << i+1 << endl;
+        cout << "Group " << g << endl;
         cout << "------- /n";
-        for(j=0; J<3; j++)
+        puts(Cteam[i].title);
+        for(j=0; j<3; )
         {
-            while()
+            k=random(24);
+            while(Cteam[i].gn!=team[k],cn)
             {
-                
+                b=1;
+                for(a=0, a<=j, a++)
+                {
+                    if(grno[a]==team[k],cn)
+                    {
+                        b=0;
+                        continue;
+                    }
+                }
+                if(b==0);
+                {
+                    k++;
+                    continue;
+                }
             }
         }
     }
