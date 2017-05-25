@@ -163,7 +163,11 @@ int main()
                     grno[j]=team[k].cn;
                     puts(team[k].title);
                     cout << endl;
-                    // array deletion function
+                    for(;k<limit;k++)
+                    {
+                        team[k]=team[k+1];
+                    }
+                    limit--;
                 }
                 if(b==0);
                 {
@@ -173,6 +177,7 @@ int main()
             }
             cout << endl;
         }
+        g++;
     }
     return 0;
 }
